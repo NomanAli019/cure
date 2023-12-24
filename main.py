@@ -18,6 +18,7 @@ def doctorsinfo(city:str,speciality:str , pageno:int ):
     speciality = speciality.lower()
     page = int(pageno)
     response = requests.get(f'http://127.0.0.1:8000/doctormarham/{city}/speciality/{speciality}/page{page}')
+    response_from_db = requests.get(f'http://127.0.0.1:8000/getdoctor_fromdb/{city}/specilization/{speciality}')
 
     data = {
         'city': city,
@@ -30,7 +31,10 @@ def doctorsinfo(city:str,speciality:str , pageno:int ):
         # Parse and print the JSON content
         json_data = response.json()
         
-        data['doctors'] = json_data
+        data['doctors'].extend(json_data)
+        # if response_from_db:
+        #     data['doctors'].extend(response_from_db)
+        
 
 
     return render_template('doctorpage1.html' , **data )
