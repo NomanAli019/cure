@@ -12,11 +12,11 @@ def hello_world():
     # Render the template
     return render_template('homepage.html')
 
-@app.route('/doctorsinfo/<city>/<speciality>')
-def doctorsinfo(city:str,speciality:str):
+@app.route('/doctorsinfo/<city>/<speciality>/<pageno>')
+def doctorsinfo(city:str,speciality:str , pageno:int ):
     city = city.lower()
     speciality = speciality.lower()
-    page = 1
+    page = int(pageno)
     response = requests.get(f'http://127.0.0.1:8000/doctormarham/{city}/speciality/{speciality}/page{page}')
 
     data = {
@@ -29,11 +29,11 @@ def doctorsinfo(city:str,speciality:str):
     if response.status_code == 200:
         # Parse and print the JSON content
         json_data = response.json()
-        print(json_data)
-        print("we here")
+        
         data['doctors'] = json_data
 
-    return render_template('doctorpage1.html' , **data)
+
+    return render_template('doctorpage1.html' , **data )
 
 
 if __name__ == "__main__":

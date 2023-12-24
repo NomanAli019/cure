@@ -25,7 +25,11 @@
          <script src="{{url_for('static',filename = 'js/DoctorPage1.js')}}"></script>
          <style>
           
-               
+          
+            #doctorcordinates, #doctorcordinates2,#doctorcordinates3 {
+                display: none;
+            }
+       
 
             
          </style>
@@ -325,7 +329,10 @@
         <section class="container">
           <div class="row">
             <div class="col-md-12" style="text-align:center">
-              <button id="load-more-btn" onclick="loadMoreDoctors()">Load More</button>
+              <a id="doctorcordinates" href="{{city}}">{{ city }}</a>
+              <a id="doctorcordinates2" href="{{speciality}}">{{ speciality }}</a>
+              <a id="doctorcordinates3" href="#">{{page}}</a>
+              <button id="load-more-btn"  onclick="loadMoreDoctors()">Load More</button>
             </div>        
       </div>
       </section>

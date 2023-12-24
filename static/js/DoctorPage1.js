@@ -41,17 +41,21 @@ function checkBothDropdwon(){
 function movetodoctorpage(){
     var city = dropdownGlobalArray[0];
     var speciality = dropdownGlobalArray[1];
-    window.location.href="/doctorsinfo/" + city+"/"+speciality;
+    page = 1
+    window.location.href="/doctorsinfo/" + city+"/"+speciality+"/"+page;
 }
 
 
-function loadMoreDoctors() {
-    var moreDoctors = [
-        "<li class='doctor'>Dr. Sarah Johnson</li>",
-        "<li class='doctor'>Dr. Michael Brown</li>",
-        // Add more doctor items as needed
-    ];
 
+function loadMoreDoctors() {
+    
+    var cityValue = document.getElementById('doctorcordinates').innerText;
+    var specialityValue = document.getElementById('doctorcordinates2').innerText;
+    var pageno = parseInt(document.getElementById('doctorcordinates3').innerText);
+    load = pageno+1;
+    console.log(cityValue )
+    console.log(load)
+    window.location.href="/doctorsinfo/" + cityValue+"/"+specialityValue+"/"+load;
     // Append the new doctors to the list
-    document.getElementById('doctor-list').innerHTML += moreDoctors.join('');
+   
 }

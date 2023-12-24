@@ -40,7 +40,8 @@ function checkBothDropdwon(){
 function movetodoctorpage(){
     var city = dropdownGlobalArray[0];
     var speciality = dropdownGlobalArray[1];
-    window.location.href="/doctorsinfo/" + city+"/"+speciality;
+    page = 1
+    window.location.href="/doctorsinfo/" + city+"/"+speciality+"/"+page;
 }
 // THE CORDINATED ARE TAKEN IN THE ABOVE CODE BLOCK 
 $(document).ready(function () {
