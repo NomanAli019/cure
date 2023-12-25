@@ -43,6 +43,12 @@ function movetodoctorpage(){
     page = 1
     window.location.href="/doctorsinfo/" + city+"/"+speciality+"/"+page;
 }
+function movetoaboutpage(){
+    window.location.href="/about"
+}
+function movetoservicepage(){
+    window.location.href="/services";
+}
 // THE CORDINATED ARE TAKEN IN THE ABOVE CODE BLOCK 
 $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');

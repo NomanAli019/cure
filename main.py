@@ -34,11 +34,15 @@ def doctorsinfo(city:str,speciality:str , pageno:int ):
         data['doctors'].extend(json_data)
         # if response_from_db:
         #     data['doctors'].extend(response_from_db)
-        
-
-
     return render_template('doctorpage1.html' , **data )
 
+@app.route('/services')
+def services():
+    return render_template('services.html')
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

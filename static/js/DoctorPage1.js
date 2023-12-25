@@ -59,3 +59,11 @@ function loadMoreDoctors() {
     // Append the new doctors to the list
    
 }
+
+function movetoservicepage(){
+    window.location.href="/services";
+}
+
+function movetoaboutpage(){
+    window.location.href="/about"
+}

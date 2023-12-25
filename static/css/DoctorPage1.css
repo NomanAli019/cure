@@ -2,6 +2,12 @@
     height: auto;
     max-width: 100%;
   }
+  .services{
+    cursor: pointer;
+  }
+  .About-Us{
+    cursor: pointer;
+  }
   /* ok */
   .appointment_heading{
     text-align: center;

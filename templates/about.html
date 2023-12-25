@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>About US</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+         crossorigin="anonymous">
+
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+         <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
+        <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
+        <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+         crossorigin="anonymous"></script>
+
+         <link rel="stylesheet" href="{{url_for('static' , filename = 'css/About.css')}}">
+         <script src="{{ url_for('static', filename='js/DoctorPage1.js') }}"></script>
+      
+         <style>
+         </style>
+
+    </head>
+    <body>
+      <!-- NAVIGATION BAR -->
+      <section class="sect1">
+      <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+        <div class="container-fluid">
+          <img src="{{url_for('static' , filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                   Cities
+                </a>
+
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item cities-dropdown" href="#">Lahore</a></li>
+                  <li><a class="dropdown-item cities-dropdown" href="#">Karachi</a></li>
+                  <li><a class="dropdown-item cities-dropdown" href="#">Islamabad</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                   (Consult Online / On-Site)
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Consult Online</a></li>
+                  <li><a class="dropdown-item" href="#">On-Site</a></li>
+                </ul>
+              </li>
+
+
+              <li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                   Doctor Specialties
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Acupuncture</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Aesthetic Physician</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Allergy Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Andrologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Anesthetist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Audiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Bariatric / Weight Loss Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Breast Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cancer Specialist / Oncologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cancer Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cardiac Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cardiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cardiothoracic Anesthetist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Chest Respiratory Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Chest Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Child Psychologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Chiropractor</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Clinical Dietician</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Clinical Nutritionist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Clinical Psychologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cosmetic Dentist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cosmetic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Cosmetologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Counselor</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Dentist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Dermatologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Diabetologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Endocrinologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Endourologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Ent Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Ent Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Eye Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Eye Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Family Medicine</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Fitness Trainer</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Gastroenterologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">General Physician</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">General Practitioner</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">General Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Geneticist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Gynecologic Oncologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Gynecologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Haemoncologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Hematologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Hepatologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Hijama Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Homeopath</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Immunologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Infectious Diseases</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Internal Medicine Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Interventional Cardiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Interventional Radiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Kidney Transplant Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Laparoscopic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Liver Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Liver Transplant Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Lung Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Maternal Fetal Medicine Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Medical Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Neonatologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Nephrologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Neuro Psychiatrist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Neuro Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Neurologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Nutritionist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Occupational Therapist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Optometrist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Oral And Maxillofacial Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Orthodontist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Orthopedic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Orthotist And Prosthetist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Paediatric Radiologis</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pain Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pathologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Cardiac Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Cardiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Endocrinologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Gastroenterologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Nephrologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Neuro Physician</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Oncologist And Hematologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Orthopedic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatric Urologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pediatrician</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pharmacist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Physiotherapist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Plastic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Psychiatrist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Psychologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Pulmonologist / Lung Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Radiation Oncologis</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Radiologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Regenerative Medicine Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Rehabilitation Medicine</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Restorative Dentist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Rheumatologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Sexologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Sonologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Speech Therapist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Spinal Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Spine Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Thoracic Surgeon</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Urological Oncologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Urologist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Vaccine Specialist</a></li>
+                  <li><a class="dropdown-item specialtie-dropdown"  href="#">Vascular Surgeon</a></li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-item"><button type="submit" disabled id="searchSubmitBtn" class="search-btn btn btn-outline-secondary" onclick="movetodoctorpage()">Search</button></a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link services" onclick="movetoservicepage()">Services</a>
+
+              </li>
+              <li class="nav-item">
+                <a class="nav-link About-Us" onclick="movetoaboutpage()">About Us</a>
+
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+           <button class="phone-btn btn-light" >
+            <i class="material-icons">phone</i>
+           </button>
+           <button type="button" class="btn btn-light" > Login / Signup </button>
+      </nav>
+      <section class="sect-3">
+        <h1 style="font-size: 7vw;">About Us</h1>
+      </section>
+    </section>
+
+    <section class="sect-2">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-5">
+                <h1>Your Health, Our Responsibility. Choose Wisely, Choose CureLifes.</h1>
+            </div>   
+            <div class="col-md-6">
+                <p class="sect2-p">WE are a pakistani based online Company bridging the gap between  patients and Doctors.Through this digital medium, users can schedule appointments, access medical records, and consult with healthcare professionals from the comfort of their homes. These platforms prioritize user-friendly interfaces, enabling seamless navigation and efficient communication between patients and healthcare providers. </p>
+            </div>   
+            </div>
+        </div>
+    </section>
+    <hr >
+
+    <section class="sect-2">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-3">
+                <h1 class="sect2-h1">23</h1>
+                <p class="sect2-p1">Years in Bussiness</p>
+            </div>   
+            <div class="col-md-3">
+                <h1 class="sect2-h1">500+</h1>
+                <p class="sect2-p1">Happy Customers</p>
+            </div>   
+            <div class="col-md-3">
+                <h1 class="sect2-h1">128</h1>
+                <p class="sect2-p1">Licensed Offer</p>
+            </div>   
+            <div class="col-md-3">
+                <h1 class="sect2-h1">2K+</h1>
+                <p class="sect2-p1">Assests Protected</p>
+            </div>   
+        </div>
+    </div>
+    </section>
+
+    <section class="sect-4">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+                <img src="{{url_for('static' , filename='homepagepics/doctorservices.jpg')}}" width="90%">
+            </div> 
+            <div class="col-md-6">
+                <h1 class="sect4-h1">Health Solutions</h1>
+                <p class="sect4-p">Pellentesque gravida iaculis amet, amet dignissim netus ac eget porttitor malesuada quisque habitant mauris, sed vestibulum convallis vel dignissim arcu lectus nunc vulputate vitae adipiscing amet nisl ultrices quam mattis et blandit amet turpis aliquam etiam commodo sit augue nec sociis platea mauris elit tempus adipiscing.</p>
+            </div> 
+        </div>
+    </div>
+    </section>
+
+    <section class="sect-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1>Testimonial</h1>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <p class="sect5-p">"Sapien, volutpat magna erat dolor mi, leo eu sagittis arcu at a turpis ipsum eget pellentesque in amet ac purus eu molestie sit scelerisque viverra volutpat ultrices mauris diam dictum nec."</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="sect5-p">"Enim cursus sed nam enim scelerisque euismod etiam nunc nisl vivamus viverra elementum, diam et urna sed suscipit risus, lectus pulvinar varius velit blandit etiam massa posuere mauris scelerisque ornare nunc sed."</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="sect5-p">"At pellentesque faucibus morbi morbi vel magna at eleifend mauris est nisl purus tellus magna volutpat elit quis nunc adipiscing mauris odio ornare nunc."
+                    </p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-3">
+                  <a href="#" class="home-footer-heading all-font-color-white">CARENIC CENTER</a><hr>
+                  <ul>
+                    <li>
+                  <a class=" all-font-color-white">Etiam varius metus non laoreet lacinia.
+                    Sed venenatis sem non nulla dapibus convallis. Nam viverra</a>
+                  </li>
+                  </ul>
+                </div>
+
+                <div class="col-md-3">
+                  <ul>
+                  <a href="#" class="home-footer-heading all-font-color-white">CONTACT US</a><hr>
+                  <li><a href="#" class=" all-font-color-white">74-10890 Holburn Lane</a></li>
+                  <li><a href="#" class=" all-font-color-white">demo@yourdomain.com</a></li>
+                  <li><a href="#" class=" all-font-color-white">(081) 079 6955 5946</a></li>
+                </ul>
+                </div>
+
+                <div class="col-md-3">
+                  <ul>
+                  <a href="#" class="home-footer-heading all-font-color-white">INFORMATION</a><hr>
+                  <li><a href="#" class=" all-font-color-white">About us</a></li>
+                  <li><a href="#" class=" all-font-color-white">Delivery Information</a></li>
+                  <li><a href="#" class=" all-font-color-white">privet policy</a></li>
+                  <li><a href="#" class=" all-font-color-white">Terms & Conditions</a></li>
+                 <li><a href="#" class=" all-font-color-white">Contact Us</a></li>
+                  <li><a href="#" class=" all-font-color-white">FAQ</a></li>
+                </ul>
+                </div>
+
+                <div class="col-sm-3">
+                  <a href="#" class="home-footer-heading all-font-color-white">FOLLOW US</a><hr>
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-youtube"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                </div>
+
+              </div>
+            </div>
+          <p class="footer_para">Copyright © 2021 All Rights Reserved | This template is made with by Designmantic </p>
+        </footer>  
+</body>
+</html>
+
+</body>
+</html>
