@@ -38,7 +38,7 @@
       <section class="sect1"> 
       <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
         <div class="container-fluid">
-          <img src="{{url_for('static' , filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image">
+          <img src="{{url_for('static' , filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image" style="cursor: pointer;" onclick="movetohome()">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -206,7 +206,7 @@
            <button class="phone-btn btn-light" >
             <i class="material-icons">phone</i>
            </button>        
-           <button type="button" class="btn btn-light" > Login / Signup </button>
+           <button type="button" class="btn btn-light" onclick="movetologin()" > Login / Signup </button>
 
           
 
@@ -223,7 +223,7 @@
           <p>
             EMPOWERING PATIENTS, CONNECTING DOCTORS, AND BRIDGING THE GAP TO BETTER HEALTHCARE.
           </p>
-          <button type="button" class="btn btn-primary"> LOGIN </button>
+          <button type="button" class="btn btn-primary" onclick="movetologin()" > LOGIN </button>
           <button type="button" class="btn btn-outline-primary text-white"> SIGN UP </button>
         </div>
       </div>

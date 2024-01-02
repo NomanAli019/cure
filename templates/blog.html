@@ -4,7 +4,7 @@
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>About US</title>
+        <title>Blog</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
          crossorigin="anonymous">
@@ -13,18 +13,17 @@
          <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
         <!-- <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script> -->
         <!-- <script src="//code.jquery.com/jquery-1.11.1.min.js"></script> -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
          integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
          crossorigin="anonymous"></script>
 
-         <link rel="stylesheet" href="{{url_for('static' , filename = 'css/About.css')}}">
-         <script src="{{ url_for('static', filename='js/DoctorPage1.js') }}"></script>
-      
+         <link rel="stylesheet" href="{{url_for('static' , filename = 'css/blog.css')}}">
+         <script src="{{url_for('static' , filename = 'js/home.js')}}"></script>
+         
          <style>
          </style>
 
@@ -34,7 +33,7 @@
       <section class="sect1">
       <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
         <div class="container-fluid">
-          <img src="{{url_for('static' , filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image" style="cursor: pointer;" onclick="movetohome()">
+          <img src="img/logo1.jpg" width="8%" height="8%" class="rounded-circle responsive-image">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -178,15 +177,15 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-item"><button type="submit" disabled id="searchSubmitBtn" class="search-btn btn btn-outline-secondary" onclick="movetodoctorpage()">Search</button></a>
+                <a class="nav-item"><button type="submit" disabled id="searchSubmitBtn" class="search-btn btn btn-outline-secondary" onclick="sendingcoordinates()">Search</button></a>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link services" onclick="movetoservicepage()">Services</a>
+                <a class="nav-link services">Services</a>
 
               </li>
               <li class="nav-item">
-                <a class="nav-link About-Us" onclick="movetoaboutpage()">About Us</a>
+                <a class="nav-link About-Us">About Us</a>
 
               </li>
 
@@ -195,137 +194,116 @@
           </div>
         </div>
 
-           <button class="phone-btn btn-light" >
+           <button class="phone-btn btn-light">
             <i class="material-icons">phone</i>
            </button>
-           <button type="button" class="btn btn-light"  onclick="movetologin()"> Login / Signup </button>
+           <button type="button" class="btn btn-light" > Login / Signup </button>
       </nav>
-      <section class="sect-3">
-        <h1 style="font-size: 7vw;">About Us</h1>
+    </section>
+
+    <section class="sect2">
+      <div class="homepage_image">
+        <div class="homepage_text">
+          <!-- <h3 style="font-size:20px">CURE LIFES</h3> -->
+          <h1 style="font-size:5vw;">Diseases Name Details</h1>
+          <button type="button" class="btn btn-primary"> HOME </button>
+          <button type="button" class="btn btn-outline-primary text-white"> BLOG </button>
+        </div>
+      </div>
       </section>
-    </section>
 
-    <section class="sect-2">
+      <section class="sect-3">
         <div class="container">
-            <div class="row">
-            <div class="col-md-5">
-                <h1>Your Health, Our Responsibility. Choose Wisely, Choose CureLifes.</h1>
-            </div>   
-            <div class="col-md-6">
-                <p class="sect2-p">WE are a pakistani based online Company bridging the gap between  patients and Doctors.Through this digital medium, users can schedule appointments, access medical records, and consult with healthcare professionals from the comfort of their homes. These platforms prioritize user-friendly interfaces, enabling seamless navigation and efficient communication between patients and healthcare providers. </p>
-            </div>   
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="sect3-h2">Diseases Name: </h2>
+              
             </div>
+          </div>
         </div>
-    </section>
-    <hr >
+      </section>
 
-    <section class="sect-2">
+      <section class="sect-3">
         <div class="container">
-            <div class="row">
-            <div class="col-md-3">
-                <h1 class="sect2-h1">23</h1>
-                <p class="sect2-p1">Years in Bussiness</p>
-            </div>   
-            <div class="col-md-3">
-                <h1 class="sect2-h1">500+</h1>
-                <p class="sect2-p1">Happy Customers</p>
-            </div>   
-            <div class="col-md-3">
-                <h1 class="sect2-h1">128</h1>
-                <p class="sect2-p1">Licensed Offer</p>
-            </div>   
-            <div class="col-md-3">
-                <h1 class="sect2-h1">2K+</h1>
-                <p class="sect2-p1">Assests Protected</p>
-            </div>   
-        </div>
-    </div>
-    </section>
-
-    <section class="sect-4">
-        <div class="container">
-            <div class="row">
+          <div class="row">
             <div class="col-md-6">
-                <img src="{{url_for('static' , filename='homepagepics/doctorservices.jpg')}}" width="90%">
-            </div> 
+              <h2 class="sect3-h2">Diseases Name details</h2>
+              <p class="sect3-p">Diseases Detail.</p>
+            </div>
             <div class="col-md-6">
-                <h1 class="sect4-h1">Health Solutions</h1>
-                <p class="sect4-p">Pellentesque gravida iaculis amet, amet dignissim netus ac eget porttitor malesuada quisque habitant mauris, sed vestibulum convallis vel dignissim arcu lectus nunc vulputate vitae adipiscing amet nisl ultrices quam mattis et blandit amet turpis aliquam etiam commodo sit augue nec sociis platea mauris elit tempus adipiscing.</p>
-            </div> 
+            
+            </div>
+          </div>
         </div>
-    </div>
-    </section>
+      </section>
 
-    <section class="sect-4">
+      <section class="sect-3">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h1>Testimonial</h1>
-                </div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <p class="sect5-p">"Sapien, volutpat magna erat dolor mi, leo eu sagittis arcu at a turpis ipsum eget pellentesque in amet ac purus eu molestie sit scelerisque viverra volutpat ultrices mauris diam dictum nec."</p>
-                </div>
-                <div class="col-md-4">
-                    <p class="sect5-p">"Enim cursus sed nam enim scelerisque euismod etiam nunc nisl vivamus viverra elementum, diam et urna sed suscipit risus, lectus pulvinar varius velit blandit etiam massa posuere mauris scelerisque ornare nunc sed."</p>
-                </div>
-                <div class="col-md-4">
-                    <p class="sect5-p">"At pellentesque faucibus morbi morbi vel magna at eleifend mauris est nisl purus tellus magna volutpat elit quis nunc adipiscing mauris odio ornare nunc."
-                    </p>
-                </div>
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="sect3-h2">Diseases Name precautions</h2>
+              <p class="sect3-p">Diseases precautions.</p>
             </div>
+          </div>
         </div>
-        </section>
+      </section>
 
-        <footer>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-3">
-                  <a href="#" class="home-footer-heading all-font-color-white">CARENIC CENTER</a><hr>
-                  <ul>
-                    <li>
-                  <a class=" all-font-color-white">Etiam varius metus non laoreet lacinia.
-                    Sed venenatis sem non nulla dapibus convallis. Nam viverra</a>
-                  </li>
-                  </ul>
-                </div>
-
-                <div class="col-md-3">
-                  <ul>
-                  <a href="#" class="home-footer-heading all-font-color-white">CONTACT US</a><hr>
-                  <li><a href="#" class=" all-font-color-white">74-10890 Holburn Lane</a></li>
-                  <li><a href="#" class=" all-font-color-white">demo@yourdomain.com</a></li>
-                  <li><a href="#" class=" all-font-color-white">(081) 079 6955 5946</a></li>
-                </ul>
-                </div>
-
-                <div class="col-md-3">
-                  <ul>
-                  <a href="#" class="home-footer-heading all-font-color-white">INFORMATION</a><hr>
-                  <li><a href="#" class=" all-font-color-white">About us</a></li>
-                  <li><a href="#" class=" all-font-color-white">Delivery Information</a></li>
-                  <li><a href="#" class=" all-font-color-white">privet policy</a></li>
-                  <li><a href="#" class=" all-font-color-white">Terms & Conditions</a></li>
-                 <li><a href="#" class=" all-font-color-white">Contact Us</a></li>
-                  <li><a href="#" class=" all-font-color-white">FAQ</a></li>
-                </ul>
-                </div>
-
-                <div class="col-sm-3">
-                  <a href="#" class="home-footer-heading all-font-color-white">FOLLOW US</a><hr>
-                  <a href="#" class="fa fa-facebook"></a>
-                  <a href="#" class="fa fa-twitter"></a>
-                  <a href="#" class="fa fa-youtube"></a>
-                  <a href="#" class="fa fa-instagram"></a>
-                </div>
-
-              </div>
+      <section class="sect-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <h2 class="sect3-h2">Diseases Name Specialist Doctors</h2>
+              <p class="sect3-p">Diseases Doctors</p>
             </div>
-          <p class="footer_para">Copyright © 2021 All Rights Reserved | This template is made with by Designmantic </p>
-        </footer>  
-</body>
-</html>
+          </div>
+        </div>
+      </section>
 
+      <footer>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <a href="#" class="home-footer-heading all-font-color-white">CARENIC CENTER</a><hr>
+              <ul>
+                <li>
+              <a class=" all-font-color-white">Etiam varius metus non laoreet lacinia.
+                Sed venenatis sem non nulla dapibus convallis. Nam viverra</a>
+              </li>
+              </ul>
+            </div>
+
+            <div class="col-md-3">
+              <ul>
+              <a href="#" class="home-footer-heading all-font-color-white">CONTACT US</a><hr>
+              <li><a href="#" class=" all-font-color-white">74-10890 Holburn Lane</a></li>
+              <li><a href="#" class=" all-font-color-white">demo@yourdomain.com</a></li>
+              <li><a href="#" class=" all-font-color-white">(081) 079 6955 5946</a></li>
+            </ul>
+            </div>
+
+            <div class="col-md-3">
+              <ul>
+              <a href="#" class="home-footer-heading all-font-color-white">INFORMATION</a><hr>
+              <li><a href="#" class=" all-font-color-white">About us</a></li>
+              <li><a href="#" class=" all-font-color-white">Delivery Information</a></li>
+              <li><a href="#" class=" all-font-color-white">privet policy</a></li>
+              <li><a href="#" class=" all-font-color-white">Terms & Conditions</a></li>
+             <li><a href="#" class=" all-font-color-white">Contact Us</a></li>
+              <li><a href="#" class=" all-font-color-white">FAQ</a></li>
+            </ul>
+            </div>
+
+            <div class="col-sm-3">
+              <a href="#" class="home-footer-heading all-font-color-white">FOLLOW US</a><hr>
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-youtube"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </div>
+
+          </div>
+        </div>
+      <p class="footer_para">Copyright © 2021 All Rights Reserved | This template is made with by Designmantic </p>
+    </footer>
 </body>
 </html>

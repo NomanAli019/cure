@@ -40,7 +40,7 @@
       <section class="sect1"> 
       <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
         <div class="container-fluid">
-          <img src="{{url_for('static',filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image">
+          <img src="{{url_for('static',filename = 'homepagepics/finallogo.jpg')}}" width="8%" height="8%" class="rounded-circle responsive-image" style="cursor: pointer;" onclick="movetohome()">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -208,7 +208,7 @@
            <button class="phone-btn btn-light" >
             <i class="material-icons">phone</i>
            </button>        
-           <button type="button" class="btn btn-light" > Login / Signup </button>
+           <button type="button" class="btn btn-light" onclick="movetologin()" > Login / Signup </button>
 
           
 
@@ -284,9 +284,10 @@
                 </div>
 
                 <div class="doc_button">
-                  <a href="{{doctor.doc_link}}" class="doc_button_red">Video Consultation</a>
+                  <a href="#" class="doc_button_red" onclick="movetologin()">Video Consultation</a>
                   <br><br>
-                  <a href="{{doctor.doc_link}}" class="doc_button_blue">Book Appointment</a>
+                  <a href="#" class="doc_button_blue" onclick="movetologin()">Book Appointment</a>
+                  <!-- {{doctor.doc_link}} -->
               </div>
               <br><br>
 

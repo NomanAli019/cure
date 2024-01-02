@@ -1,3 +1,6 @@
+function movetohome(){
+    window.location.href = "/";
+}
 var dropdownGlobalArray = [];
 // THE CORDINATES FOR FINDING A DOCTORS ok
 $(document).ready(function(){
@@ -156,3 +159,7 @@ $(document).ready(function () {
     }
 
 });
+
+function movetologin(){
+    window.location.href="/login"
+}
