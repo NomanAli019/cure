@@ -20,7 +20,7 @@ $(document).ready(function(){
 
     $('.diseases-get').on('click' , function(){
         var checkDiseases = $(this).text();
-        console.log(checkDiseases);
+        window.location.href = "/Diseaseblog/"+checkDiseases;
     });
     $('.symptom-get').on('click',function(){
         var checkSymptoms = $(this).text();
@@ -160,6 +160,3 @@ $(document).ready(function () {
 
 });
 
-function movetologin(){
-    window.location.href="/login"
-}

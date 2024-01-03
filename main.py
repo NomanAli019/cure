@@ -48,5 +48,15 @@ def about():
 def login():
     return render_template('loginPage.html')
 
+@app.route('/Diseaseblog/<disease>')
+def Diseaseblog(disease:str):
+    disease = disease.lower()
+    blog_Data = requests.get(f'http://127.0.0.1:8000/get_disease{disease}')
+    print(blog_Data)
+    return render_template('blog.html' , blog_Data=blog_Data)
+
+
+    
+
 if __name__ == "__main__":
     app.run(debug=True)
