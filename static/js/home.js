@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
     $('.symptom-get').on('click',function(){
         var checkSymptoms = $(this).text();
-        console.log(checkSymptoms);
+        window.location.href = "/symptomsblog/"+checkSymptoms;
     });
 
 });
@@ -43,7 +43,7 @@ function checkBothDropdwon(){
 function movetodoctorpage(){
     var city = dropdownGlobalArray[0];
     var speciality = dropdownGlobalArray[1];
-    page = 1
+    page = 1;
     window.location.href="/doctorsinfo/" + city+"/"+speciality+"/"+page;
 }
 function movetoaboutpage(){
@@ -160,3 +160,7 @@ $(document).ready(function () {
 
 });
 
+
+  function movetologin(){
+    window.location.href="/login"
+}

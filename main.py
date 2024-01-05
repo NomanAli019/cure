@@ -51,11 +51,17 @@ def login():
 @app.route('/Diseaseblog/<disease>')
 def Diseaseblog(disease:str):
     disease = disease.lower()
-    blog_Data = requests.get(f'http://127.0.0.1:8000/get_disease{disease}')
-    print(blog_Data)
+    blog_Data = requests.get(f'http://127.0.0.1:8000/get_disease/{disease}')
+    blog_Data = blog_Data.json()
+    print(blog_Data , "we here in route ")
     return render_template('blog.html' , blog_Data=blog_Data)
 
-
+@app.route('/symptomsblog/<symptom>')
+def symptomsblog(symptom:str):
+    symptom = symptom.lower()
+    blog_Data = requests.get(f'http://127.0.0.1:8000/symptomsblog/{symptom}')
+    blog_Data = blog_Data.json()
+    return render_template('blogsymp.html' ,  blog_Data=blog_Data)
     
 
 if __name__ == "__main__":

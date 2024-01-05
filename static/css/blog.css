@@ -1,5 +1,5 @@
 .homepage_image {
-    background-image: url("doctor.jpg");
+    background-image:url("/static/homepagepics/blogdoc.jpg");
     background-color: #cccccc;
     height: 500px;
     background-position: center;
@@ -164,19 +164,31 @@
           .home-footer-heading{
             font-weight: bold;
           }
-          .sect-3{
+          /* .sect-3{
             padding: 60px;
-          }
+          } */
           .sect3-h2{
-            font-size: 3vw;
-            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: 4vw;
+            font-family:sans-serif;
             font-weight: bolder;
-            text-align: center;
+            
+          }
+          @media screen and (max-width: 700px){
+            .sect3-h2{
+              font-size: 7vw;
+            }
           }
           .sect3-p{
             /* text-align: center; */
-            padding-top: 20px;
-            padding-bottom: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            
+            font-size: 30px;
+          }
+          @media screen and (max-width:700px) {
+            .sect3-p{
+              font-size: 20px;
+            }
           }
           .sect3-img{
             width: 100%;
