@@ -44,5 +44,25 @@ function movetologin(){
 
     document.getElementById("sect11").style.display = "block";   
 }
+gender = ""
+function takegender(selectedGender) {
+    gender = selectedGender;
+
+}
+function getsignupdata(){
+    var name = document.getElementById("FirstName").value ;
+    var lastname = document.getElementById("LastName").value ;
+    var phone = document.getElementById("Phone").value ;
+    var homeaddress = document.getElementById("Address").value ;
+    var soscontactname = document.getElementById("soscontactname").value ;
+    var soscontactnumber = document.getElementById("soscontactnumber").value ;
+    var medhistory = document.getElementById("Medhistory").value ;
+    
+    var email = document.getElementById("eml").value ;
+    var password = document.getElementById("password").value ;
+    var retypepassword = document.getElementById("Reppswrd").value ;
+
+    console.log(name , " " , lastname , " ",phone," ",homeaddress," ",soscontactname," ",soscontactnumber," ",medhistory , " " , gender, " ",email," ",password, " ",retypepassword," "  );
 
 
+}

@@ -46,7 +46,7 @@ def about():
 
 @app.route('/login')
 def login():
-    return render_template('loginPage.html')
+    return render_template('loginNSignup4Patients.html')
 
 @app.route('/Diseaseblog/<disease>')
 def Diseaseblog(disease:str):
