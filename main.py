@@ -1,5 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template , request
 import requests
+import json
 
 app = Flask(__name__, static_url_path='/static', static_folder='static')
 
@@ -62,6 +63,18 @@ def symptomsblog(symptom:str):
     blog_Data = requests.get(f'http://127.0.0.1:8000/symptomsblog/{symptom}')
     blog_Data = blog_Data.json()
     return render_template('blogsymp.html' ,  blog_Data=blog_Data)
+
+@app.route('/insertpatientdata')
+def insertpatientdata():
+    encoded_data = request.args.get('signupdata', default='')
+    signup_data = json.loads(encoded_data)
+    print("Received data:", signup_data)
+    print("we here")
+    # Process the data as needed
+    return render_template('loginNSignup4Patients.html')
+   
+
+    
     
 
 if __name__ == "__main__":

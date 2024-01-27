@@ -77,6 +77,11 @@
 
             <div class="form-field d-flex align-items-center">
               <span class="far fa-user"></span>
+              <label for="birthdate" style="color: gray;" >Birthdate</label>
+              <input type="date" id="birthdateid" name="birthdate" onchange="getBirthdate()">
+            </div>
+            <div class="form-field d-flex align-items-center">
+              <span class="far fa-user"></span>
               <input type="text" name="Phone" id="Phone" placeholder="Phone">
           </div>
 
@@ -128,6 +133,7 @@
       <div class="form-field d-flex align-items-center">
         <span class="far fa-user"></span>
         <input type="password" name="Repeat-Password" id="Reppswrd" placeholder="Repeat-Password">
+        <span id="password_alert" style="color: red;"></span>
     </div>
 
               <button class="btn mt-3" onclick="getsignupdata()">signup</button>

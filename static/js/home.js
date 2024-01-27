@@ -47,7 +47,7 @@ function movetodoctorpage(){
     window.location.href="/doctorsinfo/" + city+"/"+speciality+"/"+page;
 }
 function movetoaboutpage(){
-    window.location.href="/about"
+    window.location.href="/about";
 }
 function movetoservicepage(){
     window.location.href="/services";

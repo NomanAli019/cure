@@ -44,11 +44,17 @@ function movetologin(){
 
     document.getElementById("sect11").style.display = "block";   
 }
-gender = ""
+var gender = "";
 function takegender(selectedGender) {
     gender = selectedGender;
 
 }
+var birthdate = "";
+function getBirthdate() {
+    birthdate = document.getElementById("birthdateid").value;
+
+}
+
 function getsignupdata(){
     var name = document.getElementById("FirstName").value ;
     var lastname = document.getElementById("LastName").value ;
@@ -62,7 +68,35 @@ function getsignupdata(){
     var password = document.getElementById("password").value ;
     var retypepassword = document.getElementById("Reppswrd").value ;
 
-    console.log(name , " " , lastname , " ",phone," ",homeaddress," ",soscontactname," ",soscontactnumber," ",medhistory , " " , gender, " ",email," ",password, " ",retypepassword," "  );
+    console.log(name , " " , lastname , " " , birthdate  , " ",phone," ",homeaddress," ",soscontactname," ",soscontactnumber," ",medhistory , " " , gender, " ",email," ",password, " ",retypepassword," "  );
 
+    if (password == retypepassword ){
+        var signup_from_Data = [
+            name,
+           lastname,
+           birthdate,
+            phone,
+            homeaddress,
+           soscontactname,
+           soscontactnumber,
+            medhistory,
+          gender,
+            email,
+          password
+        ];
+    }
+    else{
+        document.getElementById("password_alert").innerHTML = "Retyped password do not match the password!!!";
+    }
+
+    if (name != "" && lastname != "" && birthdate != "" && phone != "" && homeaddress != "" && soscontactname != "" && soscontactnumber != "" && medhistory != "" && gender != "" && email != "" && password != "" && retypepassword != ""){
+        console.log("all data recived !");
+        var jsondata = JSON.stringify(signup_from_Data);
+        window.location.href = "/insertpatientdata?signupdata=" + encodeURIComponent(jsondata);
+        
+    }
+    else{
+        alert("there is a missing input in the form!");
+    }
 
 }
