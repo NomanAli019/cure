@@ -68,8 +68,15 @@ def symptomsblog(symptom:str):
 def insertpatientdata():
     encoded_data = request.args.get('signupdata', default='')
     signup_data = json.loads(encoded_data)
-    print("Received data:", signup_data)
-    print("we here")
+    for i in signup_data:
+        print(i)
+    url = f"http://127.0.0.1:8000/patient_datainsert"
+
+    
+    response = requests.post(url , json=signup_data)
+
+    
+    print("we here " )
     # Process the data as needed
     return render_template('loginNSignup4Patients.html')
    

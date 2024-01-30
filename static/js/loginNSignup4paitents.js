@@ -75,12 +75,12 @@ function getsignupdata(){
             name,
            lastname,
            birthdate,
+           gender,
             phone,
             homeaddress,
-           soscontactname,
-           soscontactnumber,
             medhistory,
-          gender,
+            soscontactname,
+            soscontactnumber,
             email,
           password
         ];
