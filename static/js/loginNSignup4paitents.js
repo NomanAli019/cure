@@ -23,6 +23,13 @@
 //         }
 //     });
 // });
+function validateuser(){
+    var loginemail =  document.getElementById("loginemail").value;
+    var loginpass = document.getElementById("loginpwd").value;
+    if (loginemail != "" && loginpass != ""){
+        
+    }
+}
 
 
 document.addEventListener("DOMContentLoaded", function() {
