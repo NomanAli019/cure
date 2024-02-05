@@ -47,6 +47,7 @@ def about():
 
 @app.route('/login')
 def login():
+    print("we are at login route")
     return render_template('loginNSignup4Patients.html')
 
 @app.route('/Diseaseblog/<disease>')
@@ -80,9 +81,9 @@ def insertpatientdata():
 #get patient 
 @app.route('/patientlogin/<email>/<password>')
 def getpatient(email:str , password:str):
-    print("we here ")
+    print("We here ")
     response = requests.get(f'http://127.0.0.1:8000/loginpatient/{email}/{password}')
-    print(response)
+
 
     return render_template('loginNSignup4Patients.html')
 

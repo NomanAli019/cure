@@ -28,7 +28,7 @@
 function validateuser() {
     var loginemail = document.getElementById("loginemail").value;
     var loginpass = document.getElementById("loginpwd").value;
-    window.location.href ="/patientlogin/"+loginemail+"/"+loginpass;
+    window.location.href ="/patientlogin/asad@gmail.com/1234";
 }
 
 
