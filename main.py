@@ -71,14 +71,21 @@ def insertpatientdata():
     for i in signup_data:
         print(i)
     url = f"http://127.0.0.1:8000/patient_datainsert"
-
-    
     response = requests.post(url , json=signup_data)
-
     
     print("we here " )
     # Process the data as needed
     return render_template('loginNSignup4Patients.html')
+
+#get patient 
+@app.route('/patientlogin/<email>/<password>')
+def getpatient(email:str , password:str):
+    print("we here ")
+    response = requests.get(f'http://127.0.0.1:8000/loginpatient/{email}/{password}')
+    print(response)
+
+    return render_template('loginNSignup4Patients.html')
+
    
 
     

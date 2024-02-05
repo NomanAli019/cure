@@ -23,17 +23,19 @@
 //         }
 //     });
 // });
-function validateuser(){
-    var loginemail =  document.getElementById("loginemail").value;
+
+
+function validateuser() {
+    var loginemail = document.getElementById("loginemail").value;
     var loginpass = document.getElementById("loginpwd").value;
-    if (loginemail != "" && loginpass != ""){
-        
-    }
+    window.location.href ="/patientlogin/"+loginemail+"/"+loginpass;
 }
 
 
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
-    // Hide the section with ID "sect2" when the page loads
     document.getElementById("sect2").style.display = "none";
 });
 
