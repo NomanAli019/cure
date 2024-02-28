@@ -25,6 +25,16 @@
 // });
 
 
+document.addEventListener("DOMContentLoaded", function() {
+   
+    var paragraph = document.getElementById("email_already_exits").textContent;
+    if(paragraph == "1"){
+        alert("USER ALREADY EXISTS WITH THAT GMAIL!!!")
+    }
+
+    
+});
+
 function validateuser() {
     var loginemail = document.getElementById("loginemail").value;
     var loginpass = document.getElementById("loginpwd").value;

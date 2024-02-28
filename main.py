@@ -47,7 +47,7 @@ def about():
 
 @app.route('/login')
 def login():
-    print("we are at login route")
+    
     return render_template('loginNSignup4Patients.html')
 
 @app.route('/Diseaseblog/<disease>')
@@ -55,7 +55,7 @@ def Diseaseblog(disease:str):
     disease = disease.lower()
     blog_Data = requests.get(f'http://127.0.0.1:8000/get_disease/{disease}')
     blog_Data = blog_Data.json()
-    print(blog_Data , "we here in route ")
+    # print(blog_Data , "we here in route ")
     return render_template('blog.html' , blog_Data=blog_Data)
 
 @app.route('/symptomsblog/<symptom>')
@@ -69,19 +69,26 @@ def symptomsblog(symptom:str):
 def insertpatientdata():
     encoded_data = request.args.get('signupdata', default='')
     signup_data = json.loads(encoded_data)
-    for i in signup_data:
-        print(i)
+    # for i in signup_data:
+    #     print(i)
     url = f"http://127.0.0.1:8000/patient_datainsert"
     response = requests.post(url , json=signup_data)
-    
-    print("we here " )
-    # Process the data as needed
-    return render_template('loginNSignup4Patients.html')
+    try:
+        response_Data = response.json()
+        for i in response_Data:
+            if response_Data[i] == "No":
+                return render_template('loginNSignup4Patients.html' , custom_value="1")
+        else:
+            # print("we here ")
+            # Process the data as needed
+            return render_template('loginNSignup4Patients.html')
+    except Exception as e:
+        return render_template('loginNSignup4Patients.html')
 
 #get patient 
 @app.route('/patientlogin/<email>/<password>')
 def getpatient(email:str , password:str):
-    print("We here ")
+    # print("We here ")
     response = requests.get(f'http://127.0.0.1:8000/loginpatient/{email}/{password}')
 
 
